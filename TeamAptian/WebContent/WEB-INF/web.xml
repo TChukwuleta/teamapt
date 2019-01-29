@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>TeamAptian</display-name>
+  
+  <servlet>
+  	<servlet-name>dispatcher</servlet-name>
+  	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>dispatcher</servlet-name>
+  	<url-pattern>*.html</url-pattern>
+  </servlet-mapping>
+  
+  <session-config>
+  	<session-timeout>30</session-timeout>
+  </session-config>
+  
+  <welcome-file-list>
+  	<welcome-file>redirect.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <context-param>
+  	<param-name>authtoken</param-name>
+  	<param-value>dr5oN0A1dAgoMY1Sfq6FliOEa4ed9nYvA_TpyEBLn5wIgnfTOOWu5FLVIB</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>posturl</param-name>
+  	<param-value>https://www.teamapt.com</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>Business</param-name>
+  	<param-value>tobechichukwuleta125@gmail.com</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>returnurl</param-name>
+  	<param-value>http://localhost:8080/TeamAptian/test/success.html</param-value>
+  </context-param>
+  
+</web-app>
